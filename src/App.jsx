@@ -2,7 +2,12 @@ import Home from "./pages/Home";
 import Login from "./pages/Login"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+
 function App() {
+  
+
+  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +17,22 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
+    <>
+      <div className="flex flex-row">
+        {data &&
+          data.message.map((message, index) => {
+            return (
+              <img
+                key={index}
+                src={message}
+                alt={message}
+                className=" max-w-50"
+              />
+            );
+          })}
+      </div>
+    </>
+
 }
 
 export default App;
