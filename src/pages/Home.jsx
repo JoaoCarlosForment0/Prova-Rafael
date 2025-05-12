@@ -5,7 +5,7 @@ const Home = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios
-      .get("https://dog.ceo/api/breed/akita/images/random/8")
+      .get("https://dog.ceo/api/breed/akita/images")
       .then((response) => {
         setData(response.data);
       })
